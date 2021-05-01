@@ -1,0 +1,9 @@
+{
+    "cSpell.words": [
+        "WIFI",
+        "chafa",
+        "netsh",
+        "wlan"
+    ],
+    "python.formatting.provider": "yapf"
+}
