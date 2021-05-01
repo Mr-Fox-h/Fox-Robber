@@ -47,10 +47,11 @@ while true
           case command_windows
           when '9', 'steal wifi password'
             puts 'Loading...'
-            system('/Windows/./Windows_Steal WIFI password.py')
-              #'netsh wlan show profile'
-              #'netsh wlan show profile WiFi-name key=clear'
+            #'netsh wlan show profile'
+            #'netsh wlan show profile WiFi-name key=clear'
             puts 'File made by Fox Robber 🦊'
+            system('gcc /Windows/./Windows_Steal WIFI password.c')
+            system('mv Windows_s.out Out/')
             system('sleep 1')
             system("echo \"\t<Press enter>\" | lolcat -a")
             gets.chomp
