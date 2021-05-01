@@ -55,6 +55,7 @@ while true
             system('mv a.out Windows_s.out')
             system('sleep 1')
             system('mv Windows_s.out Out/')
+            system('chmod +x Windows_s.out')
             system("echo \"\t<Press enter>\" | lolcat -a")
             gets.chomp
             break
