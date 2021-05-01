@@ -8,14 +8,19 @@ int main()
     FILE *file;
     char wifi_name[255];
     char command[50];
-    strcpy(command, "netsh wlan show profile > Fox.txt");
+    strcpy(command, "ls > Fox.txt");
     system(command);
     file = fopen("Fox.txt", "r");
     if (file)
     {
         while ((item = getc(file)) != EOF)
-            strcpy(wifi_name, putchar(item));
+            strcpy(wifi_name, item);
         fclose(file);
     }
+    for (size_t i = 0; i < sizeof(wifi_name) / sizeof(wifi_name[0]); i++)
+    {
+        system(wifi_name);
+    }
+
     return 0;
 }
