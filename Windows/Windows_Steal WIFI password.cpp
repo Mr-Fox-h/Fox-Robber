@@ -1,26 +1,30 @@
 #include "iostream"
-#include <stdlib.h>
+#include "fstream"
+#include "stdlib.h"
+#include "string"
 
 using namespace std;
 
 int main()
 {
-    FILE *file;
-    char item[255];
+    fstream file;
     //system("netsh wlan show profile > Fox.txt");
     system("ls > Fox.txt");
-    file = fopen("Fox.txt", "r");
-    for (int i = 0; i < 255; i++)
+    file.open("Fox.txt", ios::in);
+    if (!file)
+        cout << "No such file" << endl;
+    else
     {
-        fgets(item, 255, file);
-        printf("%s", item);
+        string essid;
+        while (1)
+        {
+            file >> essid;
+            if (file.eof())
+                break;
+            //system("netsh wlan show profile (wifi_name) key=clear > Fox_done.txt");
+            system("echo \'(essid)\' > Fox_done.txt");
+        }
     }
-    fclose(file);
-    /*
-    for (int i = 0; i < 255; i++)
-    {
-        printf("%s", item);
-    }
-    */
+    file.close();
     return 0;
 }

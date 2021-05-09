@@ -2,8 +2,12 @@
     "cSpell.words": [
         "WIFI",
         "chafa",
+        "essid",
         "netsh",
         "wlan"
     ],
-    "python.formatting.provider": "yapf"
+    "python.formatting.provider": "yapf",
+    "files.associations": {
+        "iosfwd": "cpp"
+    }
 }
