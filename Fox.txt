@@ -1,7 +1,0 @@
-a.out
-Fox robber.rb
-Fox.txt
-images.png
-Out
-README.md
-Windows
