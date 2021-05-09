@@ -1,23 +1,26 @@
-#include <stdio.h>
+#include "iostream"
 #include <stdlib.h>
-#include <string.h>
+
+using namespace std;
 
 int main()
 {
     FILE *file;
-    char wifi_name[255], item[255];
+    char item[255];
     //system("netsh wlan show profile > Fox.txt");
     system("ls > Fox.txt");
     file = fopen("Fox.txt", "r");
-    fgets(item, 255, file);
     for (int i = 0; i < 255; i++)
     {
-        wifi_name[i] = item[i];
+        fgets(item, 255, file);
+        printf("%s", item);
     }
     fclose(file);
+    /*
     for (int i = 0; i < 255; i++)
     {
-        printf("%c", wifi_name[i]);
+        printf("%s", item);
     }
+    */
     return 0;
 }
