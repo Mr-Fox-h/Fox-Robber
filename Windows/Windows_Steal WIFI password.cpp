@@ -15,14 +15,15 @@ int main()
         cout << "No such file" << endl;
     else
     {
-        string essid;
+        string essid, wifi_name[] = {"echo (" + essid + ") > Fox_done.txt"};
         while (1)
         {
             file >> essid;
             if (file.eof())
                 break;
+
             //system("netsh wlan show profile (wifi_name) key=clear > Fox_done.txt");
-            system("echo \'(essid)\' > Fox_done.txt");
+            system(wifi_name);
         }
     }
     file.close();
