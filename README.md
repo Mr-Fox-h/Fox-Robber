@@ -27,7 +27,6 @@ $ ruby Fox\ robber.rb
 ```
 ## Abilities
 ## Windows
----
 __Windows Steal WIFI password__:
 
 The __Fox Robber__ can make a executable file for stealing WIFI‌ passwords for __Windows OS__.
