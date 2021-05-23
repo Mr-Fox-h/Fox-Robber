@@ -26,7 +26,6 @@ After that use this command to run __Fox Robber tool:
 $ ruby Fox\ robber.rb
 ```
 ## Abilities
----
 ## Windows
 ---
 __Windows Steal WIFI password__:
