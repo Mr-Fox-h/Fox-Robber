@@ -2,7 +2,6 @@
 The __Fox Robber__ is a linux tool, so it's means if you want to use this tool, you have to have a ___linux OS___.
 
 ## Install
----
 If you want to use __Fox Robber__ you have to install somethings on your ___linux OS___:
 
 ```
