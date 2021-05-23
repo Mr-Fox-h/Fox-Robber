@@ -18,7 +18,7 @@ $ sudo apt-get install lolcat
 ```
 Then you can get the __Fox Robber__:
 ```
-$ git clone git@github.com:Mr-Fox-h/Fox-Robber.git
+$ git clone https://github.com/Mr-Fox-h/Fox-Robber.git
 ```
 After that use this command to run __Fox Robber tool:
 ```
