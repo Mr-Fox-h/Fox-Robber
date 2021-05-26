@@ -7,12 +7,10 @@ The __Fox Robber__ can stealing some data with some executable files. If your ta
 If you want to use __Fox Robber__ you have to install somethings on your ___linux OS___:
 
 __Install Ruby language:__
----
 ```
 $ sudo apt-get install ruby-full
 ```
 __Install crystal language:__
----
 ```
 $ curl -fsSL https://crystal-lang.org/install.sh | sudo bash
 ```
@@ -39,7 +37,6 @@ $ sudo apt install libz-dev        # for using crystal play
 $ sudo apt update && sudo apt install crystal
 ```
 __Install some command line:__
----
 ```
 $ sudo apt-get install chafa 
 ```
@@ -61,12 +58,11 @@ $ ruby Fox\ robber.rb
 __Windows__
 ---
 __Windows Steal WIFI password:__
----
 
 The __Fox Robber__ can make a executable file with __C++ language__ for stealing WIFI‌ passwords for __Windows OS__.
 
 __Linux__
 ---
 __Linux Steal WIFI password:__
----
+
 The __Fox Robber__ can make a executable file with __crystal language__ for stealing WIFI‌ passwords for __Linux OS__.
