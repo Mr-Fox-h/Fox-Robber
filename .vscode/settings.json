@@ -4,7 +4,9 @@
         "chafa",
         "essid",
         "netsh",
-        "wlan"
+        "wlan",
+        "chmod",
+        "espeak"
     ],
     "python.formatting.provider": "yapf",
     "files.associations": {

