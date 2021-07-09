@@ -10,6 +10,11 @@ __Install Ruby language:__
 ```
 $ sudo apt-get install ruby-full
 ```
+__Install colorize:__
+```
+$ sudo gem install colorize
+```
+
 __Install crystal language:__
 ```
 $ curl -fsSL https://crystal-lang.org/install.sh | sudo bash
@@ -36,6 +41,10 @@ $ sudo apt install libz-dev        # for using crystal play
 ```
 $ sudo apt update && sudo apt install crystal
 ```
+__If you have snap in your Linux OS you can use this command:__
+```
+$ sudo snap install crystal --classic
+```
 __Install some command line:__
 ```
 $ sudo apt-get install chafa 
@@ -46,7 +55,10 @@ $ sudo apt-get install espeak
 ```
 $ sudo apt-get install lolcat
 ```
-Then you can get the __Fox Robber__:
+```
+$ sudo apt-get install figlet
+```
+__Download the Fox Robber__:
 ```
 $ git clone https://github.com/Mr-Fox-h/Fox-Robber.git
 ```
