@@ -14,37 +14,6 @@ __Install colorize:__
 ```
 $ sudo gem install colorize
 ```
-
-__Install crystal language:__
-```
-$ curl -fsSL https://crystal-lang.org/install.sh | sudo bash
-```
-```
-$ curl -fsSL https://crystal-lang.org/install.sh | sudo bash -s -- --channel=nightly
-```
-```
-$ echo "deb http://download.opensuse.org/repositories/devel:/languages:/crystal/{REPOSITORY}/ /" | tee /etc/apt/sources.list.d/crystal.list
-```
-```
-$ curl -fsSL https://download.opensuse.org/repositories/devel:languages:crystal/{REPOSITORY}/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/crystal.gpg > /dev/null
-```
-```
-$ sudo apt update && sudo apt install crystal
-```
-```
-$ sudo apt install libssl-dev      # for using OpenSSL
-$ sudo apt install libxml2-dev     # for using XML
-$ sudo apt install libyaml-dev     # for using YAML
-$ sudo apt install libgmp-dev      # for using Big numbers
-$ sudo apt install libz-dev        # for using crystal play
-```
-```
-$ sudo apt update && sudo apt install crystal
-```
-__If you have snap in your Linux OS you can use this command:__
-```
-$ sudo snap install crystal --classic
-```
 __Install some command line:__
 ```
 $ sudo apt-get install chafa 
@@ -77,4 +46,4 @@ __Linux__
 ---
 __Linux Steal WIFI password:__
 
-The __Fox Robber__ can make a executable file with __crystal language__ for stealing WIFI‌ passwords for __Linux OS__.
+The __Fox Robber__ can make a executable file with __Python language__ for stealing WIFI‌ passwords for __Linux OS__.

