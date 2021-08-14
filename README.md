@@ -14,6 +14,14 @@ __Install colorize:__
 ```
 $ sudo gem install colorize
 ```
+__Install pip3:__
+```
+$ sudo apt-get install python3-pip
+```
+__Install pyinstaller:__
+```
+$ pip3 install pyinstaller
+```
 __Install some command line:__
 ```
 $ sudo apt-get install chafa 
