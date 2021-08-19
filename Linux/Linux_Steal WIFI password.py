@@ -22,6 +22,15 @@ for i in range(toolbar_width):
     sys.stdout.flush()
 
 sys.stdout.write("]\n")  # this ends the progress bar
+sys.stdout.write("]\n")
+sys.stdout.write("]\n")
+sys.stdout.write("]\n")
+sys.stdout.write("]\n")
+sys.stdout.write("]\n")
+sys.stdout.write("]\n")
+sys.stdout.write("]\n")
+sys.stdout.write("]\n")
+sys.stdout.write("]\n")
 files = os.listdir("/etc/NetworkManager/system-connections/")
 os.mkdir("Fox")
 num = 1
