@@ -72,4 +72,8 @@ Not yet.😞
 
 **Linux Steal WIFI password:**
 
-The **Fox Robber** can make a executable file with **Python language** for stealing WIFI‌ passwords for **Linux OS**.
+The **Fox Robber** can make a executable file with **Python language** for stealing WIFI‌ passwords.
+
+**Linux Steal OS password:**
+
+The **Fox Robber** can make a executable file with **Python language** for stealing OS password.
