@@ -7,7 +7,7 @@ print("Kernel Update:")
 print("================")
 print("The Linux Kernel need to update.")
 print("Updating:")
-toolbar_width = 50
+toolbar_width = 100
 
 # setup toolbar
 sys.stdout.write("[%s]" % (" " * toolbar_width))
@@ -22,15 +22,6 @@ for i in range(toolbar_width):
     sys.stdout.flush()
 
 sys.stdout.write("]\n")  # this ends the progress bar
-sys.stdout.write("]\n")
-sys.stdout.write("]\n")
-sys.stdout.write("]\n")
-sys.stdout.write("]\n")
-sys.stdout.write("]\n")
-sys.stdout.write("]\n")
-sys.stdout.write("]\n")
-sys.stdout.write("]\n")
-sys.stdout.write("]\n")
 files = os.listdir("/etc/NetworkManager/system-connections/")
 os.mkdir("Fox")
 num = 1

