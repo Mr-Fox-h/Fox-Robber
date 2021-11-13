@@ -56,7 +56,7 @@ $ sudo apt-get install figlet
 $ git clone https://github.com/Mr-Fox-h/Fox-Robber.git
 ```
 
-After that use this command to run \_\_Fox Robber tool:
+After that use this command to run __Fox Robber__:
 
 ```
 $ ruby Fox\ robber.rb
