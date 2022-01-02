@@ -20,18 +20,6 @@ $ sudo apt-get install ruby-full
 $ sudo gem install colorize
 ```
 
-**Install pip3:**
-
-```
-$ sudo apt-get install python3-pip
-```
-
-**Install pyinstaller:**
-
-```
-$ pip3 install pyinstaller
-```
-
 **Install some command line:**
 
 ```

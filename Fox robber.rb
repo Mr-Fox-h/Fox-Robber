@@ -72,31 +72,27 @@ while true
           if %w[0 back].include?(command_fox_robber)
             break
           else
-            puts "What do you want:\n[9]. Steal WIFI password\n[10]. Steal OS password\n[0]. Back".green
+            puts "What do you want:\n[9]. Python\n[10]. Ruby\n[0]. Back".green
             job = 'fox-robber [linux]'
             print "\n(#{job})>".yellow
             command_linux = gets.chomp
             case command_linux
-            when '9', 'steal-wifi-password'
+            when '9', 'python'
               puts 'Loading...'.blue
-              system('pyinstaller --onefile Linux/Linux_Steal\\ WIFI\\ password.py')
-              system('mv dist/Linux_Steal\\ WIFI\\ password Out')
-              system('rm -r dist')
-              system('rm Linux_Steal\\ WIFI\\ password.spec')
-              system('rm -r build')
-              system('rm -r Linux/__pycache__')
+              system('cp Linux/Robber.py Out')
+
+              ### Encoding ###
+
               puts 'File made by Fox Robber 🦊'.red
               system("echo \"\t<Press enter>\" | lolcat -a")
               gets.chomp
               break
-            when '10', 'steal-os-password'
+            when '10', 'Ruby'
               puts 'Loading...'.blue
-              system('pyinstaller --onefile Linux/Linux_Steal\\ OS\\ password.py')
-              system('mv dist/Linux_Steal\\ OS\\ password Out')
-              system('rm -r dist')
-              system('rm Linux_Steal\\ OS\\ password.spec')
-              system('rm -r build')
-              system('rm -r Linux/__pycache__')
+              system('cp Linux/Robber.rb Out')
+
+              ### Encoding ###
+
               puts 'File made by Fox Robber 🦊'.red
               system("echo \"\t<Press enter>\" | lolcat -a")
               gets.chomp
