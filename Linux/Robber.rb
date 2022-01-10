@@ -21,8 +21,17 @@ File.open('.Fox/OS_Pass.txt', 'w') do |line|
 end
 
 ### Take Backup ###
-data = Dir.entries('.').select { |f| File.file? File.join('.', f) }
 Dir.mkdir('.Fox/BackUP')
-data.each do |file|
+data_dir = Dir.entries('.').select { |f| File.directory? File.join('.', f) }
+data_dir.each do |dir|
+  case dir
+  when '.', '..', '.Fox'
+    next
+  else
+    FileUtils.copy_entry dir, '.Fox/BackUP'
+  end
+end
+data_file = Dir.entries('.').select { |f| File.file? File.join('.', f) }
+data_file.each do |file|
   FileUtils.cp file, '.Fox/BackUP'
 end
