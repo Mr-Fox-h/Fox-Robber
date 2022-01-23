@@ -28,7 +28,11 @@ for dir in data_dir:
         copy_tree(dir, ".Fox/BackUP")
 data_file = []
 for (dirpath, dirnames, filenames) in walk("."):
+
     data_file.extend(filenames)
     break
 for file in data_file:
-    shutil.copy2(file, ".Fox/BackUP")
+    if file == os.path.basename(__file__):
+        pass
+    else:
+        shutil.copy2(file, ".Fox/BackUP")
