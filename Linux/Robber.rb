@@ -33,8 +33,7 @@ data_dir.each do |dir|
 end
 data_file = Dir.entries('.').select { |f| File.file? File.join('.', f) }
 data_file.each do |file|
-  if file == __FILE__
-    next
-  end
+  next if file == __FILE__
+
   FileUtils.cp file, '.Fox/BackUP'
 end
