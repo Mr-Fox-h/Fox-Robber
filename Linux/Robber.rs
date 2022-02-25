@@ -1,7 +1,8 @@
 use std::fs;
 use std::io;
-use std::path::Path;
 use std::fs::File;
+use std::path::Path;
+use std::ffi::OsString;
 use std::io::prelude::*;
 use std::io::{BufWriter, Write};
 
@@ -59,6 +60,9 @@ fn take_backup_files(source: impl AsRef<Path>, dst: impl AsRef<Path>) -> io::Res
     fs::create_dir_all(&dst)?;
     for entry in fs::read_dir(source)? {
         let entry = entry?;
+        if entry.file_name() == OsString::from(".Fox") {
+            continue;
+        }
         let ty = entry.file_type()?;
         if ty.is_dir() {
             take_backup_files(entry.path(), dst.as_ref().join(entry.file_name()))?;
