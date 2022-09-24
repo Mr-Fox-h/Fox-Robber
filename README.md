@@ -1,12 +1,11 @@
 # Fox-Robber
 
-The **Fox Robber** is a linux tool, so it's means if you want to use this tool, you have to have a **_linux OS_**.
-
-The **Fox Robber** can stealing some data with some executable files. If your target runs one of them, the process begins.
+The **Fox Robber** is a simple tool to steal data.
+The **Fox Robber** can stealing some data with a executable files.
 
 # Install
 
-If you want to use **Fox Robber** you have to install somethings on your **_linux OS_**:
+If you want to use **Fox Robber** you have to install somethings on your computer:
 
 **Install Ruby language:**
 
@@ -20,23 +19,7 @@ $ sudo apt-get install ruby-full
 $ sudo gem install colorize
 ```
 
-**Install some command line:**
-
-```
-$ sudo apt-get install chafa
-```
-
-```
-$ sudo apt-get install espeak
-```
-
-```
-$ sudo apt-get install lolcat
-```
-
-```
-$ sudo apt-get install figlet
-```
+Now you can download **Fox Robber**.
 
 **Download the Fox Robber**:
 
@@ -44,10 +27,12 @@ $ sudo apt-get install figlet
 $ git clone https://github.com/Mr-Fox-h/Fox-Robber.git
 ```
 
-After that use this command to run __Fox Robber__:
+After that, use this command to run **Fox Robber**:
 
 ```
 $ ruby Fox\ robber.rb
+OR
+$ ruby "Fox robber.rb"
 ```
 
 # Abilities
@@ -58,10 +43,6 @@ Not yet.😞
 
 ## **Linux**
 
-**Linux Steal WIFI password:**
+**Simple Robber:**
 
-The **Fox Robber** can make a executable file with **Python language** for stealing WIFI‌ passwords.
-
-**Linux Steal OS password:**
-
-The **Fox Robber** can make a executable file with **Python language** for stealing OS password.
+**Fox Robber** can make a executable file for you. You can copy that in Out Folder.
